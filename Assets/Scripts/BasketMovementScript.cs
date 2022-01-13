@@ -30,7 +30,7 @@ public class BasketMovementScript : MonoBehaviour
 
         if(score >= 100)
         {
-            SceneManager.LoadScene("GameWinScene");
+            SceneManager.LoadScene("GamePlay_Level 2");
         }
     }
 
