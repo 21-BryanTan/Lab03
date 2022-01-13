@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class BasketMovementScript : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class BasketMovementScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ScoreText.GetComponent<Text>().text = "Score:" + score;
+        ScoreText.GetComponent<Text>().text = "Score: " + score;
     }
 
     // Update is called once per frame
@@ -25,7 +26,12 @@ public class BasketMovementScript : MonoBehaviour
 
       transform.position = transform.position + new Vector3(horizontalInput * speed * Time.deltaTime, 0, 0);
 
-      ScoreText.GetComponent<Text>().text = "Score:" + score;
+      ScoreText.GetComponent<Text>().text = "Score: " + score;
+
+        if(score >= 100)
+        {
+            SceneManager.LoadScene("GameWinScene");
+        }
     }
 
     private void OnCollisionEnter(Collision other)
