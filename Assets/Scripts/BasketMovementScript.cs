@@ -11,11 +11,16 @@ public class BasketMovementScript : MonoBehaviour
     public float speed;
 
     private int score;
-   
+
+    public AudioClip[] audioClipArray;
+    private AudioSource source;
+
     // Start is called before the first frame update
     void Start()
     {
         ScoreText.GetComponent<Text>().text = "Score: " + score;
+
+        source = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -40,11 +45,13 @@ public class BasketMovementScript : MonoBehaviour
         {
             Destroy(other.gameObject);
             score += 10;
+            source.PlayOneShot(audioClipArray[0], 0.2f);
             print("Healthy food collected!");
         }
         else if(other.gameObject.CompareTag("Unhealthy"))
         {
             Destroy(other.gameObject);
+            source.PlayOneShot(audioClipArray[1], 0.2f);
             SceneManager.LoadScene("GameLoseScene");
             print("Unhealthy food collected!");
         }
