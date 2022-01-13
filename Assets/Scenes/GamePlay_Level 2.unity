@@ -445,7 +445,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Timer: 10 Sec'
+  m_Text: 'Timer: 30 Sec'
 --- !u!222 &359211938
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -467,7 +467,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTime: 0
-  startingTime: 10
+  startingTime: 30
   countdownText: {fileID: 359211937}
 --- !u!1 &519420028
 GameObject:

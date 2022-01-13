@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ObjectMovement : MonoBehaviour
 {
@@ -8,7 +9,18 @@ public class ObjectMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Scene currentScene = SceneManager.GetActiveScene();
+
+        string sceneName = currentScene.name;
+
+        if(sceneName == "GamePlay_Level 1")
+        {
+            ySpeed = -4f;
+        }
+        else if(sceneName == "GamePlay_Level 2")
+        {
+            ySpeed = -6f;
+        }
     }
 
     // Update is called once per frame

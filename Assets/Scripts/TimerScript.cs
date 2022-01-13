@@ -8,7 +8,7 @@ public class TimerScript : MonoBehaviour
 {
 
     public float currentTime = 0f;
-    public float startingTime = 10f;
+    public float startingTime = 30f;
 
     [SerializeField] Text countdownText;
 
