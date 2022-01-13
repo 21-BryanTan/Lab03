@@ -386,6 +386,7 @@ GameObject:
   - component: {fileID: 359211936}
   - component: {fileID: 359211938}
   - component: {fileID: 359211937}
+  - component: {fileID: 359211939}
   m_Layer: 5
   m_Name: TimerText
   m_TagString: Untagged
@@ -444,7 +445,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Timer: 60 Sec'
+  m_Text: 'Timer: 10 Sec'
 --- !u!222 &359211938
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -453,6 +454,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 359211935}
   m_CullTransparentMesh: 0
+--- !u!114 &359211939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359211935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d730a5d3ab496db48a26dd9e9b04b121, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentTime: 0
+  startingTime: 10
+  countdownText: {fileID: 359211937}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -629,10 +645,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 749641436}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eaf1f9f26821f4be59f380600ae4018d, type: 3}
+  m_Script: {fileID: 11500000, guid: e99bb512665b6e045b57bc30e239f8bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 27260312}
+  TimerText: {fileID: 359211935}
   speed: 5
 --- !u!65 &749641440
 BoxCollider:
