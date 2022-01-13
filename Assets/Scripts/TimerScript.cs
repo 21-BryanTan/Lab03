@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TimerScript : MonoBehaviour
 {
@@ -26,6 +27,7 @@ public class TimerScript : MonoBehaviour
         if(currentTime <= 0)
         {
             currentTime = 0;
+            SceneManager.LoadScene("GameLoseScene");
         }
     }
 }
