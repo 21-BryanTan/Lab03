@@ -19,14 +19,17 @@ public class BasketMovementScript : MonoBehaviour
       float horizontalInput = Input.GetAxis("Horizontal");
 
       transform.position = transform.position + new Vector3(horizontalInput * speed * Time.deltaTime, 0, 0);
-
-        
-       
-
     }
 
-
-
-    
-
+    private void OnCollisionEnter(Collision other)
+    {
+        if(other.gameObject.CompareTag("Healthy"))
+        {
+            print("Healthy food collected!");
+        }
+        else if(other.gameObject.CompareTag("Unhealthy"))
+        {
+            print("Unhealthy food collected!");
+        }
+    }
 }
