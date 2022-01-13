@@ -5,6 +5,8 @@ using UnityEngine;
 public class BasketMovementScript : MonoBehaviour
 {
     public float speed;
+
+    private int score;
    
     // Start is called before the first frame update
     void Start()
@@ -25,6 +27,7 @@ public class BasketMovementScript : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Healthy"))
         {
+            score += 10;
             Destroy(other.gameObject);
             print("Healthy food collected!");
         }
