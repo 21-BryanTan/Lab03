@@ -38,13 +38,14 @@ public class BasketMovementScript : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Healthy"))
         {
-            score += 10;
             Destroy(other.gameObject);
+            score += 10;
             print("Healthy food collected!");
         }
         else if(other.gameObject.CompareTag("Unhealthy"))
         {
             Destroy(other.gameObject);
+            SceneManager.LoadScene("GameLoseScene");
             print("Unhealthy food collected!");
         }
     }
